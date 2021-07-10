@@ -37,8 +37,8 @@
           >I'm Shubhang Chourasia</p>
           <p class="text-justify dark:text-gray-50 tracking-wide">
             I am working as a frontend developer from past one year. New to this
-            field currently exploring more ideas to serve people better and
-            deliver them products which are both modern and inovative.
+            field currently exploring more ideas to serve industry better and
+            deliver the products which are both modern and inovative.
             <br />Apart from this, I have a great interest in photography, I love
             to capture something new. Landscape and stargazing are two of my main
             interest in photography. Also, I am a foodie. I love to explore and
