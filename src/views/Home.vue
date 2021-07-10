@@ -251,12 +251,15 @@
   </div>
 </template>
 <script>
-import { ref } from "@vue/reactivity";
+import { computed } from "@vue/runtime-core";
+import { useStore } from "vuex";
 export default {
   name: "Home",
   setup() {
-    // If dark mode
-    const isDark = ref(false);
+ // Init store
+    const store = useStore();
+    //  If Dark Mode
+    var isDark = computed(() => store.state.isDark);
 
     const devSkills = [
       "Google App Engine",

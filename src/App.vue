@@ -8,17 +8,21 @@
   </div>
 </template>
 <script>
-import { ref } from "@vue/reactivity";
 import "./assets/tailwind.css";
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
+import { computed } from "@vue/runtime-core";
+import { useStore } from "vuex";
 export default {
   components: {
     Navbar,
     Footer,
   },
   setup() {
-    const isDark = ref(false);
+    // Init store
+    const store = useStore();
+    //  If Dark Mode
+    var isDark = computed(() => store.state.isDark);
     return { isDark };
   },
 };

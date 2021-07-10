@@ -8,16 +8,25 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    meta: {
+      title: "Shubhang Chourasia - Frontend Developer",
+    },
   },
   {
     path: "/resume",
     name: "Resume",
     component: Resume,
+    meta: {
+      title: "Shubhang Chourasia - Frontend Developer",
+    },
   },
   {
     path: "/:catchAll(.*)",
     name: "Not Found",
     component: NotFound,
+    meta: {
+      title: "Page Not Found",
+    },
   },
 ];
 
@@ -36,7 +45,7 @@ const router = createRouter({
   },
 });
 router.beforeEach((to, from, next) => {
-  document.title = to.name;
+  document.title = to.meta.title;
   next();
 });
 export default router;

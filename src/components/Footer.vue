@@ -1,8 +1,10 @@
 <template>
-  <div :class="{'dark': isDark }">
+  <div :class="{ dark: isDark }">
     <div class="mt-20 py-20 bg-gray-100 dark:bg-black">
       <div class="text-center text-gray-700 font-semibold dark:text-gray-50">
-        <div class="dark:text-gray-50 tracking-wider">&copy; 2021 Shubhang Chourasia</div>
+        <div class="dark:text-gray-50 tracking-wider">
+          &copy; 2021 Shubhang Chourasia
+        </div>
         <div class="float-right mt-2 mr-10">
           <a href="#">
             <svg
@@ -25,10 +27,14 @@
 </template>
 
 <script>
-import { ref } from "@vue/reactivity";
+import { computed } from "@vue/runtime-core";
+import { useStore } from "vuex";
 export default {
   setup() {
-    const isDark = ref(false);
+    // Init store
+    const store = useStore();
+    //  If Dark Mode
+    var isDark = computed(() => store.state.isDark);
 
     return { isDark };
   },
