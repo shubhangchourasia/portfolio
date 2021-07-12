@@ -1,48 +1,151 @@
 <template>
-  <div :class="{ 'dark': isDark }">
+  <div :class="{ dark: isDark }">
     <!-- Home Section -->
     <section class="homeSection" id="#">
       <div
-        class="flex md:block justify-around pt-28 items-center h-full md:h-auto bg-indigo-600 dark:bg-black"
+        class="
+          flex
+          md:block
+          justify-around
+          pt-28
+          items-center
+          h-full
+          md:h-auto
+          bg-indigo-600
+          dark:bg-black
+        "
       >
         <!-- Intro -->
         <div class="w-full grid justify-center items-center tracking-wide">
           <p
-            class="text-2xl md:text-xl m-3 text-gray-900 font-semibold dark:text-gray-200"
-          >Hello, I'm</p>
-          <p class="text-7xl md:text-5xl m-3 text-gray-50 font-bold dark:text-indigo-600">Shubhang</p>
-          <p class="text-2xl m-3 text-gray-900 font-semibold dark:text-gray-200">Frontend Developer</p>
+            class="
+              text-2xl
+              md:text-xl
+              m-3
+              text-gray-900
+              font-extrabold
+              dark:text-gray-200
+            "
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            Hello, I'm
+          </p>
+          <p
+            class="
+              text-7xl
+              md:text-5xl
+              m-3
+              text-gray-50
+              font-bold
+              dark:text-indigo-600
+            "
+            data-aos="fade-right"
+            data-aos-delay="400"
+          >
+            Shubhang
+          </p>
+          <p
+            class="text-2xl m-3 text-gray-900 font-extrabold dark:text-gray-200"
+            data-aos="fade-right"
+            data-aos-delay="800"
+          >
+            Frontend Developer
+          </p>
+          <div class="ml-3" data-aos="fade-up" data-aos-delay="1000">
+            <router-link to="/#contact">
+              <button
+                class="
+                  bg-transparent
+                  hover:bg-gray-800
+                  text-white
+                  font-bold
+                  py-2
+                  px-6
+                  rounded
+                  mt-4
+                  border-2 border-gray-800
+                  dark:border-indigo-600
+                  dark:hover:bg-indigo-600
+                  hover:border-transparent
+                  dark:hover:border-transparent
+                  md:px-4
+                  md:py-2
+                "
+              >
+                Hire me
+              </button></router-link
+            >
+          </div>
         </div>
         <!-- Image -->
-        <div class="w-full flex justify-center h-full md:h-auto items-center md:items-end">
-          <img src="../assets/Shubhang1.png" alt="Shubhang Chourasia" class="h-auto md:h-1/2" />
+        <div
+          class="
+            w-full
+            flex
+            justify-center
+            h-full
+            md:h-auto
+            items-center
+            md:items-end
+          "
+        >
+          <img
+            src="../assets/Shubhang1.png"
+            alt="Shubhang Chourasia"
+            class="h-auto md:h-1/2 md:mt-10"
+            data-aos="fade-left"
+            data-aos-delay="500"
+          />
         </div>
       </div>
     </section>
     <!-- About Section -->
     <section class="aboutSection mt-20" id="about">
       <div class="text-center font-semibold text-3xl">
-        <h2 class="text-gray-900 tracking-widest dark:text-indigo-600">
+        <h2
+          class="text-gray-900 tracking-widest dark:text-gray-50"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           About
           <div class="bd"></div>
         </h2>
       </div>
       <div class="flex md:block justify-around mt-20">
         <div class="w-full flex justify-center">
-          <img src="../assets/Shubhang2.png" alt="Shubhang Chourasia" class="w-60 h-60 md:w-40 md:h-40" />
+          <img
+            src="../assets/Shubhang2.png"
+            alt="Shubhang Chourasia"
+            class="w-60 h-60 md:w-40 md:h-40"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          />
         </div>
-        <div class="flex flex-col justify-center mx-20 w-full md:px-10 md:mx-0">
+        <div
+          class="flex flex-col justify-center mx-20 w-full md:px-10 md:mx-0"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <p
-            class="text-indigo-600 text-2xl font-bold mb-4 md:mt-6 tracking-wide"
-          >I'm Shubhang Chourasia</p>
+            class="
+              text-indigo-600 text-2xl
+              font-bold
+              mb-4
+              md:mt-6
+              tracking-wide
+            "
+          >
+            I'm Shubhang Chourasia
+          </p>
           <p class="text-justify dark:text-gray-50 tracking-wide">
             I am working as a frontend developer from past one year. New to this
             field currently exploring more ideas to serve industry better and
             deliver the products which are both modern and inovative.
-            <br />Apart from this, I have a great interest in photography, I love
-            to capture something new. Landscape and stargazing are two of my main
-            interest in photography. Also, I am a foodie. I love to explore and
-            eat different kinds of food items.
+            <br />Apart from this, I have a great interest in photography, I
+            love to capture something new. Landscape and stargazing are two of
+            my main interest in photography. Also, I am a foodie. I love to
+            explore and eat different kinds of food items.
           </p>
         </div>
       </div>
@@ -51,35 +154,105 @@
     <!-- Skills Section -->
     <section class="skillsSection mt-20" id="skills">
       <div class="text-center font-semibold text-3xl">
-        <h2 class="text-gray-900 tracking-widest dark:text-indigo-600">
+        <h2
+          class="text-gray-900 tracking-widest dark:text-gray-50"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           Skills
           <div class="bd"></div>
         </h2>
       </div>
       <section class="flex md:block justify-around mt-20">
         <div class="flex flex-col mx-20 w-full md:px-10 md:mx-0">
-          <p class="text-indigo-600 text-2xl font-bold mb-4 md:mt-6 ml-2 tracking-wide">Development</p>
+          <p
+            class="
+              text-indigo-600 text-2xl
+              font-bold
+              mb-4
+              md:mt-6
+              ml-2
+              tracking-wide
+            "
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            Development
+          </p>
           <div class="flex flex-wrap">
             <span
-              class="cursor-pointer text-sm bg-gray-200 text-gray-700 px-3 py-1 m-2 rounded-md hover:bg-blue-700 hover:text-gray-50 dark:bg-gray-800 dark:text-gray-50 dark:hover:text-indigo-500 dark:hover:bg-gray-900"
-              v-for="tag in devSkills"
-              :key="tag"
-            >{{ tag }}</span>
+              class="
+                cursor-pointer
+                text-sm
+                bg-gray-200
+                text-gray-700
+                px-3
+                py-1
+                m-2
+                rounded-md
+                hover:bg-blue-700
+                hover:text-gray-50
+                dark:bg-gray-800
+                dark:text-gray-50
+                dark:hover:text-indigo-500
+                dark:hover:bg-gray-900
+              "
+              v-for="(tag, i) in devSkills"
+              :key="i"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              :data-aos-delay="i * 50"
+              >{{ tag }}</span
+            >
           </div>
-          <p class="text-indigo-600 text-2xl font-bold mb-4 md:mt-6 ml-2 tracking-wide">Design</p>
+          <p
+            class="
+              text-indigo-600 text-2xl
+              font-bold
+              mb-4
+              md:mt-6
+              ml-2
+              tracking-wide
+            "
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            Design
+          </p>
           <div class="flex flex-wrap cursor-pointer">
             <span
-              class="text-sm bg-gray-200 text-gray-700 px-3 py-1 m-2 rounded-md hover:bg-blue-700 hover:text-gray-50 dark:bg-gray-800 dark:text-gray-50 dark:hover:text-indigo-500 dark:hover:bg-gray-900"
-              v-for="tag in designTools"
-              :key="tag"
-            >{{ tag }}</span>
+              class="
+                text-sm
+                bg-gray-200
+                text-gray-700
+                px-3
+                py-1
+                m-2
+                rounded-md
+                hover:bg-blue-700
+                hover:text-gray-50
+                dark:bg-gray-800
+                dark:text-gray-50
+                dark:hover:text-indigo-500
+                dark:hover:bg-gray-900
+              "
+              v-for="(tag, i) in designTools"
+              :key="i"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              :data-aos-delay="i * 50"
+              >{{ tag }}</span
+            >
           </div>
         </div>
         <div class="w-full flex justify-center">
           <img
             src="../assets/programming.png"
             alt="Programming"
-            class="w-96 h-56 md:w-56 md:h-40 md:mt-6"
+            class="w-96 h-56 md:w-64 md:h-40 md:mt-6"
+            data-ao="fade-left"
+            data-aos-duration="1500"
+            data-aos-delay="200"
           />
         </div>
       </section>
@@ -87,21 +260,44 @@
     <!-- Portfolio Section -->
     <section class="skillsSection mt-20" id="portfolio">
       <div class="text-center font-semibold text-3xl">
-        <h2 class="text-gray-900 tracking-widest dark:text-indigo-600">
+        <h2
+          class="text-gray-900 tracking-widest dark:text-gray-50"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           Portfolio
           <div class="bd"></div>
         </h2>
       </div>
       <div class="p-10 max-w-80 flex justify-evenly md:block">
         <!--Cards-->
-        <div v-for="(item,i) in protfolioInfo" :key="i">
+        <div v-for="(item, i) in protfolioInfo" :key="i">
           <div
-            class="w-64 rounded-xl overflow-hidden shadow-md hover:shadow-lg m-6 md:mx-auto dark:bg-gray-900"
+            class="
+              w-64
+              rounded-xl
+              overflow-hidden
+              shadow-md
+              hover:shadow-lg
+              m-6
+              md:mx-auto
+              dark:bg-gray-900
+            "
+            data-aos="fade-up"
+            data-aos-duration="2000"
           >
             <img
               :src="require('../assets/' + item.darkImg)"
               :alt="item.name"
-              class="h-64 w-64 bg-gray-300 object-cover border-4 rounded-lg border-gray-900"
+              class="
+                h-64
+                w-64
+                bg-gray-300
+                object-cover
+                border-4
+                rounded-lg
+                border-gray-900
+              "
               v-if="isDark"
             />
             <img
@@ -113,20 +309,49 @@
 
             <div class="px-6 py-4">
               <div
-                class="font-bold text-xl mb-2 text-gray-600 dark:text-white tracking-wider"
-              >{{item.name}}</div>
-              <p class="text-gray-600 dark:text-gray-100">{{item.info}}</p>
-              <p class="mt-2 text-indigo-400 font-semibold hover:text-indigo-700">
-                <a :href="item.link" target="_blank">Visit site</a>
+                class="
+                  font-bold
+                  text-xl
+                  mb-2
+                  text-gray-600
+                  dark:text-white
+                  tracking-wider
+                "
+              >
+                {{ item.name }}
+              </div>
+              <p class="text-gray-600 dark:text-gray-100">{{ item.info }}</p>
+              <p
+                class="mt-2 text-indigo-400 font-semibold hover:text-indigo-700"
+              >
+                <a :href="item.link" target="_blank" rel="noreferrer"
+                  >Visit site</a
+                >
               </p>
-              <p class="mt-2 text-gray-600 dark:text-gray-100">Technologies used:</p>
+              <p class="mt-2 text-gray-600 dark:text-gray-100">
+                Technologies used:
+              </p>
             </div>
             <div class="px-5 pt-2 pb-2">
               <span
-                class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-500 mr-2 mb-2 dark:bg-gray-800 dark:text-gray-300"
+                class="
+                  inline-block
+                  bg-gray-100
+                  rounded-full
+                  px-3
+                  py-1
+                  text-sm
+                  font-semibold
+                  text-gray-500
+                  mr-2
+                  mb-2
+                  dark:bg-gray-800
+                  dark:text-gray-300
+                "
                 v-for="txt in item.techUsed"
                 :key="txt"
-              >{{txt}}</span>
+                >{{ txt }}</span
+              >
             </div>
           </div>
         </div>
@@ -136,24 +361,73 @@
     <!-- Contact Section -->
     <section class="skillsSection mt-20" id="contact">
       <div class="text-center font-semibold text-3xl">
-        <h2 class="text-gray-900 tracking-widest dark:text-indigo-600">
+        <h2
+          class="text-gray-900 tracking-widest dark:text-gray-50"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           Contact
           <div class="bd"></div>
         </h2>
       </div>
       <div class="flex justify-evenly mt-20 md:flex-col">
         <div class="font-semibold leading-9 md:mx-auto tracking-wider">
-          <h3 class="text-indigo-600">EMAIL</h3>
-          <span class="text-gray-600 dark:text-gray-50">shubhang24c@gmail.com</span>
+          <h3
+            class="text-indigo-600"
+            data-aos="fade-right"
+            data-aos-delay="200"
+            data-aos-duration="1500"
+          >
+            EMAIL
+          </h3>
+          <div
+            class="text-gray-600 dark:text-gray-50"
+            data-aos="fade-right"
+            data-aos-delay="300"
+            data-aos-duration="1500"
+          >
+            shubhang24c@gmail.com
+          </div>
 
-          <h3 class="text-indigo-600">PHONE</h3>
-          <span class="text-gray-600 dark:text-gray-50 tracking-widest">+91 - 951 175 1369</span>
+          <h3
+            class="text-indigo-600"
+            data-aos="fade-right"
+            data-aos-delay="400"
+            data-aos-duration="1500"
+          >
+            PHONE
+          </h3>
+          <div
+            class="text-gray-600 dark:text-gray-50 tracking-widest"
+            data-aos="fade-right"
+            data-aos-delay="500"
+            data-aos-duration="1500"
+          >
+            +91 - 951 175 1369
+          </div>
 
-          <h3 class="text-indigo-600">SOCIAL MEDIA</h3>
-          <div class="inline-flex space-x-4">
+          <h3
+            class="text-indigo-600"
+            data-aos="fade-right"
+            data-aos-delay="600"
+            data-aos-duration="1500"
+          >
+            SOCIAL MEDIA
+          </h3>
+          <div
+            class="inline-flex space-x-4"
+            data-aos="fade-right"
+            data-aos-delay="700"
+            data-aos-duration="1500"
+          >
             <!-- Linked Icon -->
 
-            <a href="https://www.linkedin.com/in/shubhang-chourasia-6a6108202/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/shubhang-chourasia-6a6108202/"
+              target="_blank"
+              aria-label="LinkedIn"
+              rel="noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -168,7 +442,12 @@
               </svg>
             </a>
             <!-- Github Icon -->
-            <a href="https://github.com/shubhangchourasia/" target="_blank">
+            <a
+              href="https://github.com/shubhangchourasia/"
+              target="_blank"
+              aria-label="Github"
+              rel="noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -183,7 +462,12 @@
               </svg>
             </a>
             <!-- Instagram Icon -->
-            <a href="https://www.instagram.com/shubhangchourasia/" target="_blank">
+            <a
+              href="https://www.instagram.com/shubhangchourasia/"
+              target="_blank"
+              aria-label="Instagram"
+              rel="noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -203,44 +487,142 @@
           <form class="flex md:flex-col md:mt-6">
             <div class="mx-2">
               <div class="flex md:flex-col">
-                <div class="mx-2">
+                <div class="mx-2" data-aos="fade-up" data-aos-duration="2000">
                   <label
-                    class="block uppercase tracking-wide text-gray-600 dark:text-gray-50 text-xs font-bold mb-2"
-                  >Name</label>
+                    class="
+                      block
+                      uppercase
+                      tracking-wide
+                      text-gray-600
+                      dark:text-gray-50
+                      text-xs
+                      font-bold
+                      mb-2
+                    "
+                    for="name"
+                    >Name</label
+                  >
                   <input
-                    class="appearance-none block w-full bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300 border dark:border-gray-600 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                    id="grid-first-name"
+                    class="
+                      appearance-none
+                      block
+                      w-full
+                      bg-gray-100
+                      text-gray-600
+                      dark:bg-gray-800
+                      dark:text-gray-300
+                      border
+                      dark:border-gray-600
+                      rounded
+                      py-3
+                      px-4
+                      mb-3
+                      leading-tight
+                      focus:outline-none
+                      focus:bg-white
+                    "
+                    id="name"
                     type="text"
                   />
                 </div>
-                <div class="mx-2">
+                <div class="mx-2" data-aos="fade-up" data-aos-duration="2000">
                   <label
-                    class="block uppercase tracking-wide text-gray-600 dark:text-gray-50 text-xs font-bold mb-2"
-                    for="grid-last-name"
-                  >Email</label>
+                    class="
+                      block
+                      uppercase
+                      tracking-wide
+                      text-gray-600
+                      dark:text-gray-50
+                      text-xs
+                      font-bold
+                      mb-2
+                    "
+                    for="email"
+                    >Email</label
+                  >
                   <input
-                    class="appearance-none block w-full bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300 border dark:border-gray-600 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                    id="grid-first-name"
+                    class="
+                      appearance-none
+                      block
+                      w-full
+                      bg-gray-100
+                      text-gray-600
+                      dark:bg-gray-800
+                      dark:text-gray-300
+                      border
+                      dark:border-gray-600
+                      rounded
+                      py-3
+                      px-4
+                      mb-3
+                      leading-tight
+                      focus:outline-none
+                      focus:bg-white
+                    "
+                    id="email"
                     type="email"
                   />
                 </div>
               </div>
-              <div class="mx-2">
+              <div class="mx-2" data-aos="fade-up" data-aos-duration="2000">
                 <label
-                  class="block uppercase tracking-wide text-gray-600 dark:text-gray-50 text-xs font-bold mb-2"
-                  for="grid-last-name"
-                >Message</label>
+                  class="
+                    block
+                    uppercase
+                    tracking-wide
+                    text-gray-600
+                    dark:text-gray-50
+                    text-xs
+                    font-bold
+                    mb-2
+                  "
+                  for="message"
+                  >Message</label
+                >
                 <textarea
-                  name="gvh"
-                  id
+                  id="message"
                   rows="10"
-                  class="w-full appearance-none block bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300 border border-gray-200 dark:border-gray-600 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  class="
+                    resize-none
+                    w-full
+                    appearance-none
+                    block
+                    bg-gray-100
+                    text-gray-600
+                    dark:bg-gray-800
+                    dark:text-gray-300
+                    border border-gray-200
+                    dark:border-gray-600
+                    rounded
+                    py-3
+                    px-4
+                    leading-tight
+                    focus:outline-none
+                    focus:bg-white
+                    focus:border-gray-500
+                  "
                 ></textarea>
               </div>
-              <div class="float-right">
+              <div
+                class="float-right"
+                data-aos="fade-up"
+                data-aos-duration="1500"
+              >
                 <button
-                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded mt-4 pointer-events-none"
-                >Send</button>
+                  class="
+                    bg-blue-500
+                    hover:bg-blue-700
+                    text-white
+                    font-bold
+                    py-2
+                    px-6
+                    rounded
+                    mt-4
+                    pointer-events-none
+                  "
+                >
+                  Send
+                </button>
                 <!-- Remove pointer events from button -->
               </div>
             </div>
@@ -253,21 +635,24 @@
 <script>
 import { computed } from "@vue/runtime-core";
 import { useStore } from "vuex";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default {
   name: "Home",
   setup() {
- // Init store
+    // Init store
     const store = useStore();
     //  If Dark Mode
     var isDark = computed(() => store.state.isDark);
-
+    //Init AOS
+    AOS.init({ once: true, duration: 1000 });
+    //Development skills
     const devSkills = [
       "Google App Engine",
       "Bootstrap",
       "Buefy",
       "Bulma",
       "C",
-      "CMS",
       "CSS",
       "Firebase",
       "Gatsby Js",
@@ -279,12 +664,15 @@ export default {
       "Nuxt Js",
       "PWA",
       "Python",
+      "Responsive",
       "SASS",
       "Tailwind",
-      "Vue Js",
+      "Vue 2",
+      "Vue 3",
     ];
+    //Design skills
     const designTools = ["Figma", "Photoshop"];
-
+    //All projects
     const protfolioInfo = [
       {
         name: "Picxilens",
@@ -300,15 +688,15 @@ export default {
         img: "dbt.png",
         darkImg: "dbtDark.png",
         link: "https://confident-kalam-3af1bc.netlify.app/",
-        techUsed: ["Gatsby Js", "Netlify", "CMS", "Bulma"],
+        techUsed: ["Gatsby Js", "Netlify", "Netlify CMS", "Bulma"],
       },
       {
         name: "Shubhang's Portfolio",
-        info: "My own portfolio.",
-        img: "portfolio.png",
+        info: "My portfolio describing my skills and projects.",
+        img: "logoLight.png",
         darkImg: "logo.png",
         link: "https://shubhangchourasia.com",
-        techUsed: ["Vue Js", "Netlify", "Tailwind"],
+        techUsed: ["Vue 3", "Netlify", "Tailwind"],
       },
     ];
     return { isDark, devSkills, designTools, protfolioInfo };

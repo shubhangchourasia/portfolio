@@ -11,6 +11,7 @@
         right-0
         bg-indigo-600
         dark:bg-black
+        z-10
       "
     >
       <div class="brand w-full relative flex justify-between">
@@ -24,42 +25,85 @@
             />
           </router-link>
         </div>
+        <!-- Toggle theme buttons -->
+        <div class="w-full flex justify-end items-center ml-1">
+          <div class="cursor-pointer" @click="toggleTheme">
+            <!-- Sun icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="h-7 w-7 sunIcon"
+              v-if="isDark"
+            >
+              <g>
+                <path
+                  fill="#fff"
+                  d="M502.42 240.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.41-94.8a17.31 17.31 0 0 0-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4a17.31 17.31 0 0 0 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.41-33.5 47.3 94.7a17.31 17.31 0 0 0 31 0l47.31-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3a17.33 17.33 0 0 0 .2-31.1zm-155.9 106c-49.91 49.9-131.11 49.9-181 0a128.13 128.13 0 0 1 0-181c49.9-49.9 131.1-49.9 181 0a128.13 128.13 0 0 1 0 181z"
+                ></path>
+                <path
+                  fill="#fff"
+                  d="M352 256a96 96 0 1 1-96-96 96.15 96.15 0 0 1 96 96z"
+                ></path>
+              </g>
+            </svg>
+            <!-- Moon icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="h-7 w-7 moonIcon"
+              v-else
+            >
+              <g>
+                <path
+                  fill="#fff"
+                  d="M320 32L304 0l-16 32-32 16 32 16 16 32 16-32 32-16zm138.7 149.3L432 128l-26.7 53.3L352 208l53.3 26.7L432 288l26.7-53.3L512 208z"
+                ></path>
+                <path
+                  fill="#fff"
+                  d="M332.2 426.4c8.1-1.6 13.9 8 8.6 14.5a191.18 191.18 0 0 1-149 71.1C85.8 512 0 426 0 320c0-120 108.7-210.6 227-188.8 8.2 1.6 10.1 12.6 2.8 16.7a150.3 150.3 0 0 0-76.1 130.8c0 94 85.4 165.4 178.5 147.7z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
         <!-- Toggle Button -->
-        <button
-          class="button ml-auto hidden md:block mx-9"
-          @click="toggleNavbar"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 tbtn"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="#fff"
-            v-if="!toggleNav"
+        <div class="flex justify-between md:ml-4">
+          <button
+            class="button ml-auto hidden md:block mx-9"
+            @click="toggleNavbar"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 tbtn"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="#fff"
-            v-else
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 tbtn"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="#fff"
+              v-if="!toggleNav"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 tbtn"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="#fff"
+              v-else
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
       <!-- Links -->
       <div
@@ -78,42 +122,14 @@
             font-bold
           "
         >
-          <li class="nav-item ml-4 md:mt-2 cursor-pointer" @click="toggleTheme">
-           
-            <!-- Sun icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-8 w-8"
-              viewBox="0 0 20 20"
-              fill="#fff"
-                       v-if="isDark"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                clip-rule="evenodd"
-              />
-            </svg>
-             <!-- Moon icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-8 w-8"
-              viewBox="0 0 20 20"
-              fill="#fff"
-              v-else
-     
-            >
-              <path
-                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-              />
-            </svg>
-          </li>
           <li
             v-for="item in navLinks"
             :key="item.tag"
             class="nav-item ml-4 linkHover md:mt-2"
           >
-            <router-link :to="item.to">{{ item.tag }}</router-link>
+            <router-link :to="item.to" class="tracking-widest">{{
+              item.tag
+            }}</router-link>
           </li>
         </ul>
       </div>
@@ -123,7 +139,7 @@
 
 <script>
 import { ref } from "@vue/reactivity";
-import { computed } from "@vue/runtime-core";
+import { computed, onMounted } from "@vue/runtime-core";
 import { useStore } from "vuex";
 export default {
   name: "Navbar",
@@ -156,7 +172,15 @@ export default {
     const toggleNavbar = () => {
       toggleNav.value = !toggleNav.value;
     };
-
+    //Toggle Navbar when clicking outside
+    onMounted(() => {
+      document.getElementById("main-view").addEventListener("click", () => {
+        if (toggleNav.value) {
+          toggleNav.value = false;
+        }
+      });
+    });
+    // Navbar links
     const navLinks = [
       { tag: "Home", to: "/" },
       { tag: "About", to: "/#about" },
@@ -187,4 +211,25 @@ export default {
   100%
     opacity: 1
     transform: rotate(180deg)
+
+.sunIcon
+  animation: 0.5s ease-in-out both icon-rotate
+@keyframes icon-rotate
+  0%
+    opacity: 0
+    transform: rotate(0deg)
+
+  100%
+    opacity: 1
+    transform: rotate(90deg)
+.moonIcon
+  animation: 0.5s ease-in-out both icon-scale
+@keyframes icon-scale
+  0%
+    opacity: 0
+    transform: scale(0)
+
+  100%
+    opacity: 1
+    transform: scale(1)
 </style>
