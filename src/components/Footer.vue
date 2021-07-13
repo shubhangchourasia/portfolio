@@ -6,7 +6,7 @@
           &copy; 2021 Shubhang Chourasia
         </div>
         <div class="float-right mt-2 mr-10">
-          <a href="#">
+          <a href="#" aria-label="Back to top">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

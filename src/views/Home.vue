@@ -17,7 +17,7 @@
       >
         <!-- Intro -->
         <div class="w-full grid justify-center items-center tracking-wide">
-          <p
+          <h2
             class="
               text-2xl
               md:text-xl
@@ -30,8 +30,8 @@
             data-aos-delay="200"
           >
             Hello, I'm
-          </p>
-          <p
+          </h2>
+          <h1
             class="
               text-7xl
               md:text-5xl
@@ -44,14 +44,15 @@
             data-aos-delay="400"
           >
             Shubhang
-          </p>
-          <p
+          </h1>
+
+          <h2
             class="text-2xl m-3 text-gray-900 font-extrabold dark:text-gray-200"
             data-aos="fade-right"
             data-aos-delay="800"
           >
             Frontend Developer
-          </p>
+          </h2>
           <div class="ml-3" data-aos="fade-up" data-aos-delay="1000">
             <router-link to="/#contact">
               <button
@@ -71,6 +72,7 @@
                   dark:hover:border-transparent
                   md:px-4
                   md:py-2
+                  tracking-wider
                 "
               >
                 Hire me
@@ -93,7 +95,7 @@
           <img
             src="../assets/Shubhang1.png"
             alt="Shubhang Chourasia"
-            class="h-auto md:h-1/2 md:mt-10"
+            class="h-auto md:mt-10"
             data-aos="fade-left"
             data-aos-delay="500"
           />
@@ -148,6 +150,31 @@
             interest in photography. By nature, I am a foodie and love to
             explore and eat different varieties of food items.
           </p>
+          <button
+            class="
+              bg-transparent
+              hover:bg-indigo-600
+              text-indigo-600
+              hover:text-white
+              dark:text-white
+              font-bold
+              py-2
+              px-6
+              rounded
+              mt-4
+              border-2 border-indigo-600
+              dark:border-indigo-600
+              dark:hover:bg-indigo-600
+              hover:border-transparent
+              dark:hover:border-transparent
+              md:px-4
+              md:py-2
+              w-56
+              tracking-wider
+            "
+          >
+            Download Resume
+          </button>
         </div>
       </div>
     </section>
@@ -183,6 +210,7 @@
           <div class="flex flex-wrap">
             <span
               class="
+                select-none
                 cursor-pointer
                 text-sm
                 bg-gray-200
@@ -220,9 +248,11 @@
           >
             Design
           </p>
-          <div class="flex flex-wrap cursor-pointer">
+          <div class="flex flex-wrap">
             <span
               class="
+                select-none
+                cursor-pointer
                 text-sm
                 bg-gray-200
                 text-gray-700
@@ -251,7 +281,7 @@
             src="../assets/programming.png"
             alt="Programming"
             class="w-96 h-56 md:w-64 md:h-40 md:mt-6"
-            data-ao="fade-left"
+            data-aos="fade-left"
             data-aos-duration="1500"
             data-aos-delay="200"
           />
@@ -485,7 +515,7 @@
           </div>
         </div>
         <div class="md:mx-auto">
-          <form class="flex md:flex-col md:mt-6">
+          <form class="flex md:flex-col md:mt-6" @submit.prevent>
             <div class="mx-2">
               <div class="flex md:flex-col">
                 <div class="mx-2" data-aos="fade-up" data-aos-duration="2000">
@@ -611,20 +641,29 @@
               >
                 <button
                   class="
-                    bg-blue-500
-                    hover:bg-blue-700
-                    text-white
+                    bg-transparent
+                    hover:bg-indigo-600
+                    text-indigo-600
+                    hover:text-white
+                    dark:text-white
                     font-bold
                     py-2
                     px-6
                     rounded
                     mt-4
-                    pointer-events-none
+                    border-2 border-indigo-600
+                    dark:border-indigo-600
+                    dark:hover:bg-indigo-600
+                    hover:border-transparent
+                    dark:hover:border-transparent
+                    md:px-4
+                    md:py-2
+                    tracking-wider
                   "
                 >
                   Send
                 </button>
-                <!-- Remove pointer events from button -->
+                <!-- Remove @submit.prevent from form tag -->
               </div>
             </div>
           </form>
@@ -665,6 +704,7 @@ export default {
       "Nuxt Js",
       "PWA",
       "Python",
+      "React",
       "Responsive",
       "SASS",
       "Tailwind",
