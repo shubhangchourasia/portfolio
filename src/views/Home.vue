@@ -172,9 +172,16 @@
               w-56
               tracking-wider
             "
+            @click="$refs.resume.click()"
           >
             Download Resume
           </button>
+          <a
+            href="/resume/Shubhang Chourasia's Resume.pdf"
+            download
+            ref="resume"
+            hidden aria-label="resume"
+          ></a>
         </div>
       </div>
     </section>
@@ -323,7 +330,6 @@
               class="
                 h-64
                 w-64
-                bg-gray-300
                 object-cover
                 border-4
                 rounded-lg
@@ -334,7 +340,7 @@
             <img
               :src="require('../assets/' + item.img)"
               :alt="item.name"
-              class="h-64 w-64 bg-gray-300 object-cover"
+              class="h-64 w-64 object-cover"
               v-else
             />
 
@@ -717,7 +723,7 @@ export default {
     const protfolioInfo = [
       {
         name: "Picxilens",
-        info: "The web application for photographers.",
+        info: "The web application for photography studios and freelancers.",
         img: "picxilens.png",
         darkImg: "picxilensDark.png",
         link: "https://picxilens.com",
@@ -725,15 +731,15 @@ export default {
       },
       {
         name: "Digital Biz Tech",
-        info: "A website for salesforce certified company.",
+        info: "A website for salesforce certified organization to reach more customers.",
         img: "dbt.png",
         darkImg: "dbtDark.png",
-        link: "https://confident-kalam-3af1bc.netlify.app/",
+        link: "https://digitalbiztech.netlify.app/",
         techUsed: ["Gatsby Js", "Netlify", "Netlify CMS", "Bulma"],
       },
       {
         name: "Shubhang's Portfolio",
-        info: "My portfolio describing my skills and projects.",
+        info: "Portfolio about my skills and projects.",
         img: "logoLight.png",
         darkImg: "logo.png",
         link: "https://shubhangchourasia.com",
