@@ -177,7 +177,7 @@
             Download Resume
           </button>
           <a
-            href="/resume/Shubhang Chourasia's Resume.pdf"
+            href="/resume/Shubhang Chourasia Resume.pdf"
             download
             ref="resume"
             hidden aria-label="resume"

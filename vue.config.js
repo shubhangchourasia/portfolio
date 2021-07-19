@@ -1,7 +1,4 @@
 module.exports = {
-  devServer: {
-    host: "Shubhang Chourasia - Frontend Developer",
-  },
   pwa: {
     name: "Shubhang Chourasia - Frontend Developer",
     themeColor: "#ffffff",
