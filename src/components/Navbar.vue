@@ -155,8 +155,8 @@ export default {
       // Set theme in store
       store.dispatch("tryUpdate", theme);
     } else {
-      localStorage.setItem("darkMode", false);
-      store.dispatch("tryUpdate", false);
+      localStorage.setItem("darkMode", true);
+      store.dispatch("tryUpdate", true);
     }
 
     const toggleTheme = () => {

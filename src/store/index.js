@@ -3,7 +3,7 @@ import { createStore } from "vuex";
 export default createStore({
   state: {
     //If Dark mode
-    isDark: false,
+    isDark: true,
   },
   mutations: {
     updateTheme(state, payload) {

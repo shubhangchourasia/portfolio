@@ -734,7 +734,7 @@ export default {
         info: "A website for salesforce certified organization to reach more customers.",
         img: "dbt.png",
         darkImg: "dbtDark.png",
-        link: "https://digitalbiztech.netlify.app/",
+        link: "https://www.digitalbiz.tech",
         techUsed: ["Gatsby Js", "Netlify", "Netlify CMS", "Bulma"],
       },
       {
