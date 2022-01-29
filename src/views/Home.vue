@@ -66,12 +66,10 @@
                   rounded
                   mt-4
                   border-2 border-gray-800
-                  dark:border-indigo-600
-                  dark:hover:bg-indigo-600
+                  dark:border-indigo-600 dark:hover:bg-indigo-600
                   hover:border-transparent
                   dark:hover:border-transparent
-                  md:px-4
-                  md:py-2
+                  md:px-4 md:py-2
                   tracking-wider
                 "
               >
@@ -163,12 +161,10 @@
               rounded
               mt-4
               border-2 border-indigo-600
-              dark:border-indigo-600
-              dark:hover:bg-indigo-600
+              dark:border-indigo-600 dark:hover:bg-indigo-600
               hover:border-transparent
               dark:hover:border-transparent
-              md:px-4
-              md:py-2
+              md:px-4 md:py-2
               w-56
               tracking-wider
             "
@@ -180,7 +176,8 @@
             href="/resume/Shubhang Chourasia Resume.pdf"
             download
             ref="resume"
-            hidden aria-label="resume"
+            hidden
+            aria-label="resume"
           ></a>
         </div>
       </div>
@@ -226,8 +223,7 @@
                 py-1
                 m-2
                 rounded-md
-                hover:bg-blue-700
-                hover:text-gray-50
+                hover:bg-blue-700 hover:text-gray-50
                 dark:bg-gray-800
                 dark:text-gray-50
                 dark:hover:text-indigo-500
@@ -267,8 +263,7 @@
                 py-1
                 m-2
                 rounded-md
-                hover:bg-blue-700
-                hover:text-gray-50
+                hover:bg-blue-700 hover:text-gray-50
                 dark:bg-gray-800
                 dark:text-gray-50
                 dark:hover:text-indigo-500
@@ -327,14 +322,7 @@
             <img
               :src="require('../assets/' + item.darkImg)"
               :alt="item.name"
-              class="
-                h-64
-                w-64
-                object-cover
-                border-4
-                rounded-lg
-                border-gray-900
-              "
+              class="h-64 w-64 object-cover border-4 rounded-lg border-gray-900"
               v-if="isDark"
             />
             <img
@@ -382,8 +370,7 @@
                   text-gray-500
                   mr-2
                   mb-2
-                  dark:bg-gray-800
-                  dark:text-gray-300
+                  dark:bg-gray-800 dark:text-gray-300
                 "
                 v-for="txt in item.techUsed"
                 :key="txt"
@@ -521,7 +508,7 @@
           </div>
         </div>
         <div class="md:mx-auto">
-          <form class="flex md:flex-col md:mt-6" @submit.prevent>
+          <form class="flex md:flex-col md:mt-6" @submit.prevent="submitForm">
             <div class="mx-2">
               <div class="flex md:flex-col">
                 <div class="mx-2" data-aos="fade-up" data-aos-duration="2000">
@@ -540,14 +527,14 @@
                     >Name</label
                   >
                   <input
+                    required
                     class="
                       appearance-none
                       block
                       w-full
                       bg-gray-100
                       text-gray-600
-                      dark:bg-gray-800
-                      dark:text-gray-300
+                      dark:bg-gray-800 dark:text-gray-300
                       border
                       dark:border-gray-600
                       rounded
@@ -555,11 +542,11 @@
                       px-4
                       mb-3
                       leading-tight
-                      focus:outline-none
-                      focus:bg-white
+                      focus:outline-none focus:bg-white
                     "
                     id="name"
                     type="text"
+                    v-model="formDetails.Name"
                   />
                 </div>
                 <div class="mx-2" data-aos="fade-up" data-aos-duration="2000">
@@ -578,14 +565,14 @@
                     >Email</label
                   >
                   <input
+                    required
                     class="
                       appearance-none
                       block
                       w-full
                       bg-gray-100
                       text-gray-600
-                      dark:bg-gray-800
-                      dark:text-gray-300
+                      dark:bg-gray-800 dark:text-gray-300
                       border
                       dark:border-gray-600
                       rounded
@@ -593,11 +580,11 @@
                       px-4
                       mb-3
                       leading-tight
-                      focus:outline-none
-                      focus:bg-white
+                      focus:outline-none focus:bg-white
                     "
                     id="email"
                     type="email"
+                    v-model="formDetails.Email"
                   />
                 </div>
               </div>
@@ -617,6 +604,7 @@
                   >Message</label
                 >
                 <textarea
+                  required
                   id="message"
                   rows="10"
                   class="
@@ -626,18 +614,16 @@
                     block
                     bg-gray-100
                     text-gray-600
-                    dark:bg-gray-800
-                    dark:text-gray-300
+                    dark:bg-gray-800 dark:text-gray-300
                     border border-gray-200
                     dark:border-gray-600
                     rounded
                     py-3
                     px-4
                     leading-tight
-                    focus:outline-none
-                    focus:bg-white
-                    focus:border-gray-500
+                    focus:outline-none focus:bg-white focus:border-gray-500
                   "
+                  v-model="formDetails.Message"
                 ></textarea>
               </div>
               <div
@@ -646,7 +632,10 @@
                 data-aos-duration="1500"
               >
                 <button
+                  :disabled="sendingForm"
+                  :class="{ 'cursor-not-allowed': sendingForm }"
                   class="
+                    flex
                     bg-transparent
                     hover:bg-indigo-600
                     text-indigo-600
@@ -658,18 +647,36 @@
                     rounded
                     mt-4
                     border-2 border-indigo-600
-                    dark:border-indigo-600
-                    dark:hover:bg-indigo-600
+                    dark:border-indigo-600 dark:hover:bg-indigo-600
                     hover:border-transparent
                     dark:hover:border-transparent
-                    md:px-4
-                    md:py-2
+                    md:px-4 md:py-2
                     tracking-wider
                   "
                 >
+                  <svg
+                    v-if="sendingForm"
+                    class="animate-spin -ml-1 mr-3 h-5 w-5 text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      class="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      stroke-width="4"
+                    ></circle>
+                    <path
+                      class="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    ></path>
+                  </svg>
                   Send
                 </button>
-                <!-- Remove @submit.prevent from form tag -->
               </div>
             </div>
           </form>
@@ -681,6 +688,7 @@
 <script>
 import { computed } from "@vue/runtime-core";
 import { useStore } from "vuex";
+import { ref } from "@vue/reactivity";
 import AOS from "aos";
 import "aos/dist/aos.css";
 export default {
@@ -746,7 +754,64 @@ export default {
         techUsed: ["Vue 3", "Netlify", "Tailwind"],
       },
     ];
-    return { isDark, devSkills, designTools, protfolioInfo };
+    // Form Details
+    let formDetails = ref({
+      Name: null,
+      Email: null,
+      Message: null,
+    });
+    // Form Status
+    let sendingForm = ref(false);
+    // Contact Form Submit
+    const submitForm = () => {
+      console.log("name", formDetails.value.Name);
+      console.log("email", formDetails.value.Email);
+      console.log("message", formDetails.value.Message);
+      sendingForm.value = true;
+      var xhr = new XMLHttpRequest();
+      //Url of google sheets script.
+      xhr.open(
+        "POST",
+        "https://script.google.com/macros/s/AKfycbwWibLR4PIQuLn-yJEfwR1hBT-WIRd8HbszRRRxNw3Z2vbC6O0OOlENqkwv5bz9Tkhckg/exec"
+      );
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          alert(
+            "Thank You for submitting your response. I will get back to you shortly."
+          );
+          sendingForm.value = false;
+          formDetails.value = {
+            Name: null,
+            Email: null,
+            Message: null,
+          };
+        }
+      };
+      xhr.onerror = (err) => {
+        console.log("err", err);
+      };
+      var encoded = Object.keys(formDetails.value)
+        .map(function (k) {
+          return (
+            encodeURIComponent(k) +
+            "=" +
+            encodeURIComponent(formDetails.value[k])
+          );
+        })
+        .join("&");
+      xhr.send(encoded);
+    };
+
+    return {
+      isDark,
+      devSkills,
+      designTools,
+      protfolioInfo,
+      formDetails,
+      sendingForm,
+      submitForm,
+    };
   },
 };
 </script>
