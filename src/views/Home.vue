@@ -145,7 +145,7 @@
             innovative. <br />
             Additionally, I am passionate for photography, I love to capture
             something amazing. Landscape and stargazing are two of my main
-            interest in photography. By nature, I am a foodie and love to travel explore.
+            interest in photography. By nature, I am a foodie and love to travel and explore.
           </p>
           <button
             class="
