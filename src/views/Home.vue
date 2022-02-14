@@ -143,10 +143,9 @@
             this field currently exploring an opportunity to serve industry with
             an objective to deliver products which are both modern and
             innovative. <br />
-            Additionally, I passionate for photography, I love to capture
+            Additionally, I am passionate for photography, I love to capture
             something amazing. Landscape and stargazing are two of my main
-            interest in photography. By nature, I am a foodie and love to
-            explore and eat different varieties of food items.
+            interest in photography. By nature, I am a foodie and love to travel explore.
           </p>
           <button
             class="
@@ -447,7 +446,7 @@
             <!-- Linked Icon -->
 
             <a
-              href="https://www.linkedin.com/in/shubhang-chourasia-6a6108202/"
+              href="https://www.linkedin.com/in/shubhangchourasia/"
               target="_blank"
               aria-label="LinkedIn"
               rel="noreferrer"
@@ -764,9 +763,6 @@ export default {
     let sendingForm = ref(false);
     // Contact Form Submit
     const submitForm = () => {
-      console.log("name", formDetails.value.Name);
-      console.log("email", formDetails.value.Email);
-      console.log("message", formDetails.value.Message);
       sendingForm.value = true;
       var xhr = new XMLHttpRequest();
       //Url of google sheets script.
