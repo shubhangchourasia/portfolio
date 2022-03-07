@@ -145,7 +145,8 @@
             innovative. <br />
             Additionally, I am passionate for photography, I love to capture
             something amazing. Landscape and stargazing are two of my main
-            interest in photography. By nature, I am a foodie and love to travel and explore.
+            interest in photography. By nature, I am a foodie and love to travel
+            and explore.
           </p>
           <button
             class="
@@ -701,28 +702,20 @@ export default {
     AOS.init({ once: true, duration: 1000 });
     //Development skills
     const devSkills = [
-      "Google App Engine",
+      "Nuxt Js",
+      "Vue Js",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Gatsby Js",
+      "React",
+      "Firebase",
+      "Python",
+      "Gitlab/Github",
       "Bootstrap",
+      "Tailwind",
       "Buefy",
       "Bulma",
-      "C",
-      "CSS",
-      "Firebase",
-      "Gatsby Js",
-      "Git",
-      "Gitlab/Github",
-      "HTML",
-      "JavaScript",
-      "Netlify CMS",
-      "Nuxt Js",
-      "PWA",
-      "Python",
-      "React",
-      "Responsive",
-      "SASS",
-      "Tailwind",
-      "Vue 2",
-      "Vue 3",
     ];
     //Design skills
     const designTools = ["Figma", "Photoshop"];
